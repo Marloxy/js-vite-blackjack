@@ -15,9 +15,11 @@ html, body {
 
 .carta {
   position: relative;
-  width: 150px;
+  width: 142px;
   left: 100px;
   margin-left: -75px;
+  background-color: white;
+  border-radius: 10px;
 }
 
 #computadora-cartas, #jugador-cartas {
