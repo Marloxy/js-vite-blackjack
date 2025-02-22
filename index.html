@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/public/White_stake.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="preload" href="./assets/cartas/2C.webp" as="image" />
     <link rel="preload" href="./assets/cartas/2D.webp" as="image" />
     <link rel="preload" href="./assets/cartas/2H.webp" as="image" />
@@ -66,12 +66,40 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <script src="/src/blackjack/usescases/Gradient.js" ></script>
   </head>
+  <style>
+    body {
+        margin:0;
+        padding:0;
+    }
+    #gradient-canvas {
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        --gradient-color-1: #bed8ff;
+        --gradient-color-2: #eeeeee;
+        --gradient-color-3: #c99a9d;
+        --gradient-color-4: #ebebeb;
+    }
+  </style>
   <body>
-    <header class="titulo">Blackjack</header>
+    <canvas id="gradient-canvas" style="width:100vw;height:100vh"></canvas>
+    <header class="titulo">
+      <div class="d-flex justify-content-between align-items-center flexTitulo">
+        <a class="d-flex align-items-center" href="https://github.com/Marloxy/js-vite-blackjack" target="_blank">
+          <img class="logoBlackjack"  src="/public/White_stake.png">
+        </a>
+        <div>Blackjack</div>
+        <a class="d-flex align-items-center" href="https://github.com/Marloxy/js-vite-blackjack" target="_blank">
+          <img class="logoGitHub"  src="/public/github-mark-white.png">
+        </a>
+      </div>
+    </header>
 
-    <div class="row">
-      <div id="divBotones" class="col text-center">
+    <div class="row g-0">
+      <div id="divBotones" class="col text-center pt-1">
         <button id="btnNuevo" class="btn btn-danger">New Game</button>
         <button id="btnPedir" class="btn btn-primary">Draw</button>
         <button id="btnDetener" class="btn btn-primary">Stay</button>
@@ -97,6 +125,10 @@
     </div>
 
     <div id="app"></div>
+    <script>
+        var gradient = new Gradient()
+        gradient.initGradient('#gradient-canvas');
+    </script>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

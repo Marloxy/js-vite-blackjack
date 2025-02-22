@@ -23,33 +23,27 @@ const puntosHTML = document.querySelectorAll('small');
 
 
 deck = crearDeck(tipos, especiales);
-addDeck(divDeckHTML);
+btnPedir.disabled   = true;
+btnDetener.disabled = true;
+
 
 
 
 // Eventos
 btnPedir.addEventListener('click', () => {
 
-    const carta = pedirCarta(deck);
+    puntosJugador = pedirCarta(deck, puntosHTML[0], puntosJugador, divCartasJugador);
     
-    puntosJugador = puntosJugador + valorCarta( carta, puntosJugador);
-    puntosHTML[0].innerText = puntosJugador;
-    
-    
-    const imgCarta = crearCartaHTML(carta);
-    divCartasJugador.append( imgCarta );
 
     if ( puntosJugador > 21 ) {
-        console.warn('Lo siento mucho, perdiste');
         btnPedir.disabled   = true;
         btnDetener.disabled = true;
-        turnoComputadora( puntosJugador, puntosHTML[1], divCartasComputadora, deck );
+        turnoComputadora( puntosJugador, puntosHTML[1], divCartasComputadora, puntosComputadora, deck );
 
     } else if ( puntosJugador === 21 ) {
-        console.warn('21, genial!');
         btnPedir.disabled   = true;
         btnDetener.disabled = true;
-        turnoComputadora( puntosJugador, puntosHTML[1], divCartasComputadora, deck );
+        turnoComputadora( puntosJugador, puntosHTML[1], divCartasComputadora, puntosComputadora, deck );
     }
 
 });
@@ -59,7 +53,7 @@ btnDetener.addEventListener('click', () => {
     btnPedir.disabled   = true;
     btnDetener.disabled = true;
 
-    turnoComputadora( puntosJugador,  puntosHTML[1], divCartasComputadora, deck );
+    turnoComputadora( puntosJugador,  puntosHTML[1], divCartasComputadora, puntosComputadora, deck );
 });
 
 
@@ -82,6 +76,12 @@ btnNuevo.addEventListener('click', () => {
     btnDetener.disabled = false;
 
     addDeck(divDeckHTML);
+
+    for (let i = 0; i < 2; i++){
+        puntosJugador = pedirCarta(deck, puntosHTML[0], puntosJugador, divCartasJugador);
+    }
+
+    puntosComputadora = pedirCarta(deck, puntosHTML[1], puntosComputadora, divCartasComputadora);
 
 });
 

@@ -8,7 +8,6 @@
 
 html, body {
   margin: 0px;
-  background-color: #fafafa;
   color: white;
   font-family: 'Balatro', sans-serif;
 }
@@ -17,8 +16,17 @@ html, body {
   text-align: center;
   background-color: rgb(65, 65, 65);
   color: rgb(255, 255, 255);
-  padding: 20px;
+  height: auto;
   font-size: 36px;
+}
+
+.flexTitulo{
+  height: 80px;
+}
+
+.logoBlackjack, .logoGitHub{
+  width: 45px;
+  margin: 0px 20px;
 }
 
 .btn {
@@ -42,7 +50,7 @@ html, body {
 
 .deckCentral {
   margin: 0 auto;
-  padding-top: 120px;
+  align-self: flex-end;
   text-align: center;
 }
 

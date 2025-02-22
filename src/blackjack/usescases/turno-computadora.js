@@ -8,27 +8,17 @@ import { pedirCarta, valorCarta, crearCartaHTML} from './'
  * @param {Array<String>} deck 
  */
 
-export const turnoComputadora = ( puntosMinimos, puntosHTML, divCartasComputadora, deck = []) => {
+export const turnoComputadora = ( puntosMinimos, puntosHTML, divCartasComputadora, puntosComputadora, deck = []) => {
 
     if ( !puntosMinimos ) throw new Error('puntosMinimos son necesarios');
     if ( !puntosHTML ) throw new Error('Argumento puntosHTML es necesario');
 
 
-    let puntosComputadora = 0;
-
-
     do {
-        const carta = pedirCarta(deck);
-
-        puntosComputadora = puntosComputadora + valorCarta(carta, puntosComputadora);
-        puntosHTML.innerText = puntosComputadora;
-        
-        const imgCarta = crearCartaHTML(carta);
-        divCartasComputadora.append( imgCarta );
-
         if( puntosMinimos > 21 ) {
             break;
         }
+        puntosComputadora = pedirCarta(deck, puntosHTML, puntosComputadora, divCartasComputadora);
 
     } while(  (puntosComputadora < puntosMinimos)  && (puntosMinimos <= 21 ) );
 
