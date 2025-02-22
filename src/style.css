@@ -17,31 +17,54 @@ html, body {
   text-align: center;
   background-color: rgb(65, 65, 65);
   color: rgb(255, 255, 255);
-  padding: 10px;
+  padding: 20px;
   font-size: 36px;
 }
 
 .btn {
   width: 180px;
-  margin-left: 5px;
+  justify-content: space-around;
+  margin: 5px;
   font-size: 36px;
   text-align: center;
   border-radius: 15px;
   box-shadow: 0px 5px 2px rgba(0, 0, 0, 0.5);
+
 }
 
-.nombresJugadores {
+.contenedor{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width:   100%;
+  padding: 10px;
+}
+
+.deckCentral {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.nombresJugadores{  width: 100%;
   background-color: rgba(192, 192, 192, 0.692);
-  width: 600px;
   margin-top: 50px;
   border-radius: 15px;
   border-style: solid;
   border-color: rgb(216, 215, 215);
-  padding-left: 10px;
-  padding-right: 1px;
   font-size: 36px;
   color: rgb(65, 65, 65);
+  box-shadow: 0px 5px 2px rgba(0, 0, 0, 0.5);
   text-align-last: justify;
+}
+
+.itemIzq {
+  padding-left: 10px;
+  padding-right: 1px;
+}
+
+.itemDer {
+  padding-left: 1px;
+  padding-right: 10px;
 }
 
 .puntuacion{
@@ -62,6 +85,15 @@ html, body {
   left: 100px;
   margin-left: -75px;
   background-color: white;
+  border-radius: 12px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(180, 180, 180);
+  box-shadow: -1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.deckImagen{
+  width: 180px;
   border-radius: 12px;
   border-style: solid;
   border-width: 2px;

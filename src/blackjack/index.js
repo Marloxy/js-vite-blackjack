@@ -1,5 +1,5 @@
 import _ from 'underscore';
-import {crearDeck, pedirCarta, valorCarta, turnoComputadora, crearCartaHTML} from './usescases/index'
+import {crearDeck, pedirCarta, valorCarta, turnoComputadora, crearCartaHTML, addDeck} from './usescases/index'
 
 
 
@@ -9,7 +9,6 @@ const especiales = ['A','J','Q','K'];
 
 let puntosJugador = 0,
     puntosComputadora = 0;
-// let puntosJugadores = [0, 1];
 
 // Referencias del HTML
 const btnPedir   = document.querySelector('#btnPedir');
@@ -18,11 +17,14 @@ const btnNuevo   = document.querySelector('#btnNuevo');
 
 const divCartasJugador     = document.querySelector('#jugador-cartas');
 const divCartasComputadora = document.querySelector('#computadora-cartas');
+const divDeckHTML          = document.querySelector('#deck-central');
 
 const puntosHTML = document.querySelectorAll('small');
 
 
 deck = crearDeck(tipos, especiales);
+addDeck(divDeckHTML);
+
 
 
 // Eventos
@@ -60,6 +62,7 @@ btnDetener.addEventListener('click', () => {
     turnoComputadora( puntosJugador,  puntosHTML[1], divCartasComputadora, deck );
 });
 
+
 btnNuevo.addEventListener('click', () => {
 
     console.clear();
@@ -77,6 +80,8 @@ btnNuevo.addEventListener('click', () => {
 
     btnPedir.disabled   = false;
     btnDetener.disabled = false;
+
+    addDeck(divDeckHTML);
 
 });
 
