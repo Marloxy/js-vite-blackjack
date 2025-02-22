@@ -19,6 +19,7 @@
 - [ ] add a feature to add sounds.
 - [X] add a feature that changes the background to a gradient background.
 - [ ] add a deature that adds a counter of victory in the session, and global.
+- [ ] 
 
 ## Contributing
 
