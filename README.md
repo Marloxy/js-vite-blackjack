@@ -17,7 +17,8 @@
 - [ ] add a feature that when you hit draw, the card is added with an animation.
 - [ ] add a feature that puts the computer on the right side (and makes the drawing of the cards have a delay of 1sec).
 - [ ] add a feature to add sounds.
-- [ ] add a feature that changes the background to a gradient background
+- [X] add a feature that changes the background to a gradient background.
+- [ ] add a feature to count a session victory counter, and global.
 
 ## Contributing
 
