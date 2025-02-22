@@ -1,5 +1,5 @@
 import _ from 'underscore';
-import {crearDeck, pedirCarta, valorCarta, turnoComputadora, crearCartaHTML, addDeck} from './usescases/index'
+import {crearDeck, pedirCarta, valorCarta, turnoComputadora, crearCartaHTML, addDeck, Gradient} from './usescases/index'
 
 
 
@@ -25,6 +25,9 @@ const puntosHTML = document.querySelectorAll('small');
 deck = crearDeck(tipos, especiales);
 btnPedir.disabled   = true;
 btnDetener.disabled = true;
+
+let gradient = new Gradient()
+gradient.initGradient('#gradient-canvas');
 
 
 
