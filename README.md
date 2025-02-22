@@ -18,7 +18,7 @@
 - [ ] add a feature that puts the computer on the right side (and makes the drawing of the cards have a delay of 1sec).
 - [ ] add a feature to add sounds.
 - [X] add a feature that changes the background to a gradient background.
-- [ ] add a feature to count a session victory counter, and global.
+- [ ] add a deature that adds a counter of victory in the session, and global.
 
 ## Contributing
 
