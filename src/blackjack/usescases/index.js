@@ -5,3 +5,4 @@ export { turnoComputadora } from './turno-computadora';
 export { valorCarta } from './valor-carta';
 export { addDeck } from './add-deck-html';
 export { Gradient } from './Gradient';
+export { iniciarContadores, registrarVictoria } from './contador-victoria.js'

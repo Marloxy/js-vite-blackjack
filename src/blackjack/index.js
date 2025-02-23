@@ -1,5 +1,5 @@
 import _ from 'underscore';
-import {crearDeck, pedirCarta, valorCarta, turnoComputadora, crearCartaHTML, addDeck, Gradient} from './usescases/index'
+import {crearDeck, pedirCarta, valorCarta, turnoComputadora, crearCartaHTML, addDeck, Gradient, iniciarContadores, registrarVictoria} from './usescases/index'
 
 
 
@@ -28,7 +28,7 @@ btnDetener.disabled = true;
 
 let gradient = new Gradient()
 gradient.initGradient('#gradient-canvas');
-
+iniciarContadores();
 
 
 

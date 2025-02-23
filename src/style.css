@@ -25,7 +25,7 @@ html, body {
 }
 
 .logoBlackjack, .logoGitHub{
-  width: 45px;
+  width: 36px;
   margin: 0px 20px;
 }
 
@@ -133,6 +133,10 @@ html, body {
     background-size: 100% 4px;
     animation: scanlines .2s linear infinite;
   }
+}
+
+.test {
+  background-color: black;
 }
 
 #computadora-cartas, #jugador-cartas {
