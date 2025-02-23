@@ -135,8 +135,32 @@ html, body {
   }
 }
 
-.test {
+.contenedorMarcadoresPadre{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:   100%;
+  padding: 10px;
   background-color: black;
+}
+
+.contenedorMarcadores{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+  padding: 10px;
+  background-color: blue;
+  margin: auto;
+}
+
+.textAlignMarcadoresDer{
+  text-align: right;
+  font-size: 36px;
+}
+
+#sesionJugador, #sesionComputadora, #globalJugador, #globalComputadora{
+  font-size: 36px;
 }
 
 #computadora-cartas, #jugador-cartas {
