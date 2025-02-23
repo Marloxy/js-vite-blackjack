@@ -87,17 +87,18 @@
         padding:0;
     }
     #gradient-canvas {
-        z-index: -1;
+        z-index: -2;
         position: absolute;
         top: 0;
         left: 0;
-        --gradient-color-1: #bed8ff;
+        --gradient-color-1: #accdff;
         --gradient-color-2: #eeeeee;
         --gradient-color-3: #c99a9d;
         --gradient-color-4: #ebebeb;
     }
   </style>
   <body>
+    <div class="scanlines"></div>
     <canvas id="gradient-canvas" style="width:100vw;height:100vh"></canvas>
     <header class="titulo">
       <div class="d-flex justify-content-between align-items-center flexTitulo">

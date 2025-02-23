@@ -110,6 +110,31 @@ html, body {
   box-shadow: -1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
+.scanlines {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  opacity: .6;
+  pointer-events: none;
+  will-change: opacity;
+  animation: opacity 3s linear infinite;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 40%, rgba(255, 255, 255, 0.2) 51%);
+    background-size: 100% 4px;
+    animation: scanlines .2s linear infinite;
+  }
+}
+
 #computadora-cartas, #jugador-cartas {
   height: 240px;
   margin-top: 20px;
