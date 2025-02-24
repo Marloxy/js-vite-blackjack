@@ -149,9 +149,9 @@ html, body {
   align-items: center;
   width: 40%;
   padding: 0px 10px 0px 10px;
-  background-color: rgb(65, 65, 65);
   border-radius: 15px;
   margin: auto;
+  background-color: rgb(65, 65, 65);
 }
 
 .textAlignMarcadoresDer{
@@ -159,21 +159,45 @@ html, body {
   font-size: 36px;
 }
 
-.numerosMarcadores{
-  width: 20%;
-  text-align: center;
-  border-radius: 15px;
-  background-color: #5996F4;
-}
-
 .textMarcador{
+  width: 40%;
+}
+
+.numerosMarcadores{
   width: 30%;
+  border-radius: 15px;
 }
 
 
-#sesionJugador, #sesionComputadora, #globalJugador, #globalComputadora{
+.numerosMarcadoresHijo{
+  display: flex;
+ justify-content: space-between;
+}
+
+#globalJugador, #globalComputadora{
   font-size: 36px;
+  display: inline-block;
+  background-color: rgb(65, 65, 65);
+  width: 80%;
+  border-radius: 15px;
+  border: solid;
+  border-color: #F9A003;
+  text-align-last: center;
+  color: white;
 }
+
+#sesionJugador, #sesionComputadora{
+  font-size: 36px;
+  display: inline-block;
+  background-color: rgb(65, 65, 65);
+  width: 50%;
+  border-radius: 15px;
+  border: solid;
+  border-color: rgb(216, 215, 215);
+  text-align-last: center;
+  color: white;
+}
+
 
 #computadora-cartas, #jugador-cartas {
   height: 240px;

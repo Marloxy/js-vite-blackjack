@@ -30,14 +30,8 @@ let gradient = new Gradient()
 gradient.initGradient('#gradient-canvas');
 iniciarContadores();
 
-
-
-// Eventos
-btnPedir.addEventListener('click', () => {
-
-    puntosJugador = pedirCarta(deck, puntosHTML[0], puntosJugador, divCartasJugador);
+const comprobarPuntuacion = () => {
     
-
     if ( puntosJugador > 21 ) {
         btnPedir.disabled   = true;
         btnDetener.disabled = true;
@@ -48,6 +42,16 @@ btnPedir.addEventListener('click', () => {
         btnDetener.disabled = true;
         turnoComputadora( puntosJugador, puntosHTML[1], divCartasComputadora, puntosComputadora, deck );
     }
+}
+
+
+
+// Eventos
+btnPedir.addEventListener('click', () => {
+
+    puntosJugador = pedirCarta(deck, puntosHTML[0], puntosJugador, divCartasJugador);
+    
+    comprobarPuntuacion();
 
 });
 
@@ -85,6 +89,8 @@ btnNuevo.addEventListener('click', () => {
     }
 
     puntosComputadora = pedirCarta(deck, puntosHTML[1], puntosComputadora, divCartasComputadora);
+
+    comprobarPuntuacion();
 
 });
 

@@ -13,16 +13,33 @@ export const turnoComputadora = ( puntosMinimos, puntosHTML, divCartasComputador
     if ( !puntosMinimos ) throw new Error('puntosMinimos son necesarios');
     if ( !puntosHTML ) throw new Error('Argumento puntosHTML es necesario');
 
+//
+//    do {
+//        if( puntosMinimos > 21 ) {
+//            break;
+//        }
+//        puntosComputadora = pedirCarta(deck, puntosHTML, puntosComputadora, divCartasComputadora);
+//
+//    } while(  (puntosComputadora < puntosMinimos)  && (puntosMinimos <= 21 ) );
+//
+//     setTimeout(() => {
+//         registrarVictoria(puntosMinimos, puntosComputadora);
+//     }, 500 );
+//}
 
-    do {
-        if( puntosMinimos > 21 ) {
-            break;
-        }
-        puntosComputadora = pedirCarta(deck, puntosHTML, puntosComputadora, divCartasComputadora);
+    const jugarTurno = () => {
+        if ((puntosComputadora < puntosMinimos) && (puntosMinimos <= 21)) {
+            setTimeout(() => {
+                puntosComputadora = pedirCarta(deck, puntosHTML, puntosComputadora, divCartasComputadora);
+            
+                jugarTurno(); // Llamada recursiva para continuar el turno
+            }, 1000);
+        } else {
+            setTimeout(() => {
+                registrarVictoria(puntosMinimos, puntosComputadora);
+        }, 300);
+    }
+};
+jugarTurno();
 
-    } while(  (puntosComputadora < puntosMinimos)  && (puntosMinimos <= 21 ) );
-
-     setTimeout(() => {
-         registrarVictoria(puntosMinimos, puntosComputadora);
-     }, 500 );
-}
+};
