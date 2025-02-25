@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/public/White_stake.png"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" type="image/svg+xml" href="/public/White_stake.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preload" href="./assets/cartas/2C.webp" as="image" />
     <link rel="preload" href="./assets/cartas/2D.webp" as="image" />
     <link rel="preload" href="./assets/cartas/2H.webp" as="image" />
@@ -56,19 +56,19 @@
     <link rel="preload" href="./assets/cartas/AD.webp" as="image" />
     <link rel="preload" href="./assets/cartas/AH.webp" as="image" />
     <link rel="preload" href="./assets/cartas/AS.webp" as="image" />
-    <link rel="preload" href="./assets/decks/Abandoned_Deck.webp" as="image">
-    <link rel="preload" href="./assets/decks/Anaglyph_Deck.webp" as="image">
-    <link rel="preload" href="./assets/decks/Black_Deck.webp" as="image">
-    <link rel="preload" href="./assets/decks/Blue_Deck.webp" as="image">
-    <link rel="preload" href="./assets/decks/Checkered_Deck.webp" as="image">
-    <link rel="preload" href="./assets/decks/Erratic_Deck.webp" as="image">
-    <link rel="preload" href="./assets/decks/Ghost_Deck.webp" as="image">
-    <link rel="preload" href="./assets/decks/Green_Deck.webp" as="image">
-    <link rel="preload" href="./assets/decks/Magic_Deck.webp" as="image">
-    <link rel="preload" href="./assets/decks/Nebula_Deck.webp" as="image">
-    <link rel="preload" href="./assets/decks/Painted_Deck.webp" as="image">
-    <link rel="preload" href="./assets/decks/Plasma_Deck.webp" as="image">
-    <link rel="preload" href="./assets/decks/Zodiac_Deck.webp" as="image">
+    <link rel="preload" href="./assets/decks/Abandoned_Deck.webp" as="image" />
+    <link rel="preload" href="./assets/decks/Anaglyph_Deck.webp" as="image" />
+    <link rel="preload" href="./assets/decks/Black_Deck.webp" as="image" />
+    <link rel="preload" href="./assets/decks/Blue_Deck.webp" as="image" />
+    <link rel="preload" href="./assets/decks/Checkered_Deck.webp" as="image" />
+    <link rel="preload" href="./assets/decks/Erratic_Deck.webp" as="image" />
+    <link rel="preload" href="./assets/decks/Ghost_Deck.webp" as="image" />
+    <link rel="preload" href="./assets/decks/Green_Deck.webp" as="image" />
+    <link rel="preload" href="./assets/decks/Magic_Deck.webp" as="image" />
+    <link rel="preload" href="./assets/decks/Nebula_Deck.webp" as="image" />
+    <link rel="preload" href="./assets/decks/Painted_Deck.webp" as="image" />
+    <link rel="preload" href="./assets/decks/Plasma_Deck.webp" as="image" />
+    <link rel="preload" href="./assets/decks/Zodiac_Deck.webp" as="image" />
 
     <title>Blackjack</title>
 
@@ -79,35 +79,42 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
- 
   </head>
   <style>
     body {
-        margin:0;
-        padding:0;
+      margin: 0;
+      padding: 0;
     }
     #gradient-canvas {
-        z-index: -2;
-        position: absolute;
-        top: 0;
-        left: 0;
-        --gradient-color-1: #accdff;
-        --gradient-color-2: #eeeeee;
-        --gradient-color-3: #c99a9d;
-        --gradient-color-4: #ebebeb;
+      z-index: -2;
+      position: absolute;
+      top: 0;
+      left: 0;
+      --gradient-color-1: #accdff;
+      --gradient-color-2: #eeeeee;
+      --gradient-color-3: #c99a9d;
+      --gradient-color-4: #ebebeb;
     }
   </style>
   <body>
     <div class="scanlines"></div>
-    <canvas id="gradient-canvas" style="width:100vw;height:100vh"></canvas>
+    <canvas id="gradient-canvas" style="width: 100vw; height: 100vh"></canvas>
     <header class="titulo">
       <div class="d-flex justify-content-between align-items-center flexTitulo">
-        <a class="d-flex align-items-center" href="https://github.com/Marloxy/js-vite-blackjack" target="_blank">
-          <img class="logoBlackjack"  src="/public/White_stake.png">
+        <a
+          class="d-flex align-items-center"
+          href="https://github.com/Marloxy/js-vite-blackjack"
+          target="_blank"
+        >
+          <img class="logoBlackjack" src="/public/White_stake.png" />
         </a>
         <div>Blackjack</div>
-        <a class="d-flex align-items-center" href="https://github.com/Marloxy/js-vite-blackjack" target="_blank">
-          <img class="logoGitHub"  src="/public/github-mark-white.png">
+        <a
+          class="d-flex align-items-center"
+          href="https://github.com/Marloxy/js-vite-blackjack"
+          target="_blank"
+        >
+          <img class="logoGitHub" src="/public/github-mark-white.png" />
         </a>
       </div>
     </header>
@@ -140,34 +147,28 @@
 
     <div class="contenedorMarcadoresPadre">
       <div class="contenedorMarcadores">
-        <div class="row textMarcador">
-         <h1 class="playerMarcador">
-           Player 
-          </h1>
-          <h1 class="playerMarcador">
-            Player Global
-          </h1>
+        <div class="textMarcador">
+          <h1 class="textAlignMarcadoresIzq">Victory</h1>
         </div>
-        <div class="row numerosMarcadores">
+          <div class="">
+            <div class="numerosMarcadoresHijo">
+              <span id="sesionJugador">0</span>
+              <span id="globalJugador">0</span>
+            </div>
+          </div>
+      </div>
+      <div class="divSeparador"></div>
+      <div class="contenedorMarcadores2">
+        <div class="">
           <div class="numerosMarcadoresHijo">
-            <span id="sesionJugador">0</span>
+            <span id="globalComputadora">0</span>
             <span id="sesionComputadora">0</span>
           </div>
-          <div class="numerosMarcadoresHijo">
-            <span id="globalJugador">0</span>
-            <span id="globalComputadora">0</span>
-          </div>
         </div>
-        <div class="row textMarcador">
-          <h1 class=" textAlignMarcadoresDer">
-            Computer 
-          </h1>
-          <h1 class=" textAlignMarcadoresDer">
-             Computer global
-          </h1>
+        <div class="textMarcador">
+          <h1 class="textAlignMarcadoresDer">Defeat</h1>
         </div>
       </div>
-    </div>
 
 
     <div id="app"></div>
